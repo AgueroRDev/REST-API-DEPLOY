@@ -1,0 +1,33 @@
+get http://localhost:1234/movies
+
+### 
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+###
+get http://localhost:1234/movies?genre=terror
+
+###
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "id": "af99c829-3227-48f1-9b74-20f6daed7580",
+        "title": "The GodFather",
+        "genre": [
+            "Crime",
+            "Drama"
+        ],
+        "director": "Francis Ford Coppola",
+        "year": 1975,
+        "duration": 175,
+        "poster": "https://m.media-amazon.com/images/I/516S3AENTuL._AC_SL1000_.jpg"
+    
+}
+
+###
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year":2023
+}
